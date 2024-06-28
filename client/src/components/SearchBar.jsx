@@ -17,7 +17,7 @@ const SearchBar = () => {
     e.preventDefault();
 
     try {
-      const notes = await axios.get("http://localhost:6969/notes/getFiles", {
+      const notes = await axios.get("https://notes-app-xrhv.onrender.com/notes/getFiles", {
         params: {
           title: searchQuery,
         },
@@ -36,7 +36,7 @@ const SearchBar = () => {
   }
 
   const showPDF = async (files) => {
-    window.open(`http://localhost:6969/files/${files}`, "_blank", "noreferrer");
+    window.open(`https://notes-app-xrhv.onrender.com/files/${files}`, "_blank", "noreferrer");
   };
 
   return (
